@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script defer src="./starter/data.js"></script>
-    <script defer src="./starter/index.js"></script>
+    <!-- <script defer src="./starter/data.js"></script>
+    <script defer src="./starter/index.js"></script> -->
     <script defer src="./src/data.js"></script>
     <script defer src="./src/index.js"></script>
     <link rel="stylesheet" href="./main.css" />
@@ -17,6 +17,18 @@
     </header>
     <div class="container">
       <ul id="book-list" class="cards">
+        <form id="book-form">
+          <label id="book-form-title">Upload New Book</label><br>
+          <label for="title">Title</label><br>
+          <input type="text" id="title" name="title">
+          <label for="author" >Author</label><br>
+          <input type="text" id="author" name="author">
+          <label for="price">Price</label><br>
+          <input type="text"id="price" name="price">
+          <label for="img">Image URL</label><br>
+          <input type="textarea" id="image_url" name="image_url">
+          <button>Submit</button>
+        </form>
         <li>cards go here</li>
       </ul>
       <aside>
