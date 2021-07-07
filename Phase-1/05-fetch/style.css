@@ -90,3 +90,34 @@ input:focus {
 #hidden{
   display: none;
 }
+
+/* forms */
+#review-form {
+  margin: 0 auto;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.75);
+  background-color: #fecd2f;
+}
+
+#review-form input {
+  width: 90%;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  padding: 5px;
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.75em 1.5em;
+  background-color: #4ac75d;
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}

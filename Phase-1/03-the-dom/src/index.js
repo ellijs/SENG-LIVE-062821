@@ -113,6 +113,7 @@ function renderCard(book) {
   labelUserID.textContent = "User ID";
   labelContent.textContent = "Comment";
   reviewBtn.textContent = "Submit";
+  
 
   // Add Inventory when clicked
   btn.addEventListener("click", () => {
@@ -127,14 +128,22 @@ function renderCard(book) {
     pReviews.innerHTML = getOnlyComments(book);
   }
 
+  let rmBtn = newTag("button")
+  rmBtn.innerText = "X"
+  
+
+
+
   reviewForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    // console.log(e);
+    console.log(e);
     let newReview = {
       user_id: e.target.user_id.value,
       content: e.target.content.value,
     };
     addReviewsToData(newReview);
+    e.target.user_id.value = "";
+    e.target.content.value = ""
   });
 }
 
