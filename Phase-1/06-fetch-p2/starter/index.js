@@ -41,10 +41,10 @@ function renderPokemonDetail(pokemon) {
             <p id="type>Types: ${pokemon.types.join(" ")}</p>
             <p id="height">Height: ${pokemon.height}</p>
             <p id="abilities"> Abilities: ${pokemon.abilities.join(" ")}</p>
-            <p id="moves-list"> Moves: ${pokemon.moves.join(" ")}
+            <p id="moves-list"> Moves: ${pokemon.moves.join(" ")}</p>
             <form>
-              <input type = "text" id="moves" name="moves">
-              <input type ="submit" value="add moves"
+              <input type = "text" id="moves" name="moves"/>
+              <input type ="submit" value="add moves"/>
             </form>
           </div>
         </div>
@@ -69,7 +69,6 @@ function showCards(id) {
     document.querySelector("#pokemon-container").innerHTML = renderPokemonDetail(json)
   
     document.querySelector('#pokemon-container form').addEventListener("submit", (e) => {
-      debugger;
         e.preventDefault();
         console.log(e.target)
         json.moves.push(e.target.moves.value)
