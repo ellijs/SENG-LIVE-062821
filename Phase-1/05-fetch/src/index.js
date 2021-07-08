@@ -23,7 +23,8 @@ function renderSinglePokemon(pokemon){
   divFrame.append(h1, divImage)
   divContainer.append(divFrame)
 
-  divContainer.addEventListener('click',() => showPokemon(pokemon.id))
+  // divContainer.addEventListener('click',() => showPokemon(pokemon.id))
+  divContainer.addEventListener("click", () => showPokemon(pokemon.id))
 
   document.querySelector('#pokemon-container').append(divContainer)
 }
@@ -40,15 +41,15 @@ function fetchAllPokemon(){
  
 }
 
-//GET One
-//Should take an id as a parameter 
-//Should make Get request Fetching a single animal from our json-server
-//Should handle a promise
-//Should render that pokemon to the page and remove the other pokemon
-function showPokemon(id){
-  console.log(id)
-  fetch(`http://localhost:3000/pokemon/${id}`)
-  .then(res => res.json())
-  .then(json => console.log(json))
-}
+// //GET One
+// //Should take an id as a parameter 
+// //Should make Get request Fetching a single animal from our json-server
+// //Should handle a promise
+// //Should render that pokemon to the page and remove the other pokemon
+// function showPokemon(id){
+//   console.log(id)
+//   fetch(`http://localhost:3000/pokemon/${id}`)
+//   .then(res => res.json())
+//   .then(json => console.log(json))
+// }
 

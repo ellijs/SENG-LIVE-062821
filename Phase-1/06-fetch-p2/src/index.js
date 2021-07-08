@@ -1,3 +1,4 @@
+
 //Will run callback after dom has loaded
 document.addEventListener('DOMContentLoaded', () => {
   fetchAllPokemon()
@@ -28,38 +29,40 @@ function renderSinglePokemon(pokemon){
   document.querySelector('#pokemon-container').append(divContainer)
 }
 
-function renderPokemonDetail(pokemon){
-  console.log(pokemon)
-  return (`
-    <div class="pokemon-card" id=${pokemon.id}> 
-      <div class="pokemon-frame">
-        <h1>${pokemon.id}: ${pokemon.name}</h1>
-        <div class="pokemon-image">
-        <img class="toggle-sprite" src="${pokemon.sprites.front}">
-        <img class="toggle-sprite" src="${pokemon.sprites.back}">
-        </div>
-        <div>
-          <p id="type">Types: ${pokemon.types.join(' ')}</p>
-          <p id="height" >Height: ${pokemon.height}</p>
-          <p id="weight">Weight: ${pokemon.weight}</p>
-          <p id="abilities"> Abilities: ${pokemon.abilities.join(' ')}
-          <p id="moves-list"> Moves: ${pokemon.moves.join(' ')}
-          <form>
-            <input type="text" id="moves" name="moves">
-            <input type="submit" value="add moves">
-          </form>
-        </div>
-      </div>
-    </div>
-  `)
-}
+// function renderPokemonDetail(pokemon){
+//   console.log(pokemon)
+//   return (`
+//     <div class="pokemon-card" id=${pokemon.id}> 
+//       <div class="pokemon-frame">
+//         <h1>${pokemon.id}: ${pokemon.name}</h1>
+//         <div class="pokemon-image">
+//         <img class="toggle-sprite" src="${pokemon.sprites.front}">
+//         <img class="toggle-sprite" src="${pokemon.sprites.back}">
+//         </div>
+//         <div>
+//           <p id="type">Types: ${pokemon.types.join(' ')}</p>
+//           <p id="height" >Height: ${pokemon.height}</p>
+//           <p id="weight">Weight: ${pokemon.weight}</p>
+//           <p id="abilities"> Abilities: ${pokemon.abilities.join(' ')}
+//           <p id="moves-list"> Moves: ${pokemon.moves.join(' ')}
+//           <form>
+//             <input type="text" id="moves" name="moves">
+//             <input type="submit" value="add moves">
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   `)
+// }
 
 //GET Requests ------------------------------------------------------
 //GET All
 function fetchAllPokemon(){
-  fetch('http://localhost:3000/pokemon')
+  fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
   .then(res => res.json())
-  .then(json => json.forEach(renderSinglePokemon))
+  .then(json =>  {
+    console.log(json)
+  })
  
 }
 
