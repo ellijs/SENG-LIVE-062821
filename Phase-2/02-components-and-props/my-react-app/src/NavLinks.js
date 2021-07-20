@@ -1,1 +1,0 @@
-function NavLinks({ title, content, someProp})

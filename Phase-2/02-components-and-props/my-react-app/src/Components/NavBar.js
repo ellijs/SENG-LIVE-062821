@@ -1,3 +1,5 @@
+import NavLinks from '../Components/NavLinks'
+
 function NavBar ({ isLoggedIn, someProp }) {
 
     return(
@@ -11,11 +13,13 @@ function NavBar ({ isLoggedIn, someProp }) {
             <p>{ isLoggedIn ? "Logged In" : "Logged Out" }</p>
             <hr />
             <NavLinks 
-              title = "First Link"
-              content ="Content"
+              title = "I am from NavLink"
+              content ="But value passed down from NavBar"
               someProp={someProp}
             />
-            <NavLinks title = "Hi"/>
+            <NavLinks title = "Hi, different NavLink"/>
         </nav>
     )
 }
+
+export default NavBar

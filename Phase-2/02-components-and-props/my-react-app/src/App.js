@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from "./Components/NavBar"
+import Header from "./Components/Header"
 
 function App() {
+  const someProp = "Hi"
   return (
     <div className="App">
       <NavBar 
-        isLoggedIn
+        isLoggedIn = {false}
         someProp = {someProp}
       />
       <Header />
