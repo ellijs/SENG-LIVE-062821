@@ -1,5 +1,49 @@
 function App() {
-  return <div>Toys go here</div>;
+  return (
+    <div>
+          <div id="toy-header">
+        <img
+          src="https://fontmeme.com/permalink/180719/67429e6afec53d21d64643101c43f029.png"
+          alt="toy-header"
+        />
+      </div>
+    
+      <div className="container">
+        <form className="add-toy-form">
+          <h3>Create a toy!</h3>
+    
+          <input
+            type="text"
+            name="name"
+            value=""
+            placeholder="Enter a toy's name..."
+            className="input-text"
+          />
+          <br />
+          <input
+            type="text"
+            name="image"
+            value=""
+            placeholder="Enter a toy's image URL..."
+            className="input-text"
+          />
+          <br />
+          <input
+            type="submit"
+            name="submit"
+            value="Create Toy"
+            className="submit"
+          />
+        </form>
+      </div>
+      <p style={{textAlign:"center"}}>
+        Andy needs your help! <button id="new-toy-btn">Add a new toy!</button>
+      </p>
+    
+      <div id="toy-collection"></div>
+      <script type="text/javascript" src="src/index.js"></script>
+    </div>
+    )
 }
 
 /* 
